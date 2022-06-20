@@ -1,8 +1,8 @@
-# TODO 串口读取数据
-import re
-import time  # 导入时间包
 
-import serial  # 导入串口包
+import re
+import time  
+
+import serial  
 import matplotlib.pyplot as plt
 
 import socket
@@ -32,14 +32,12 @@ last_json={}
 HOST = '192.168.125.1'
 PORT = 1025
 
-#ser = serial.Serial(port="COM4", baudrate=9600, bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE,
-  #                  stopbits=serial.STOPBITS_ONE, timeout=5)  # 开启com3口，波特率9600，超时5
-#ser.flushInput()  # 清空缓冲区
+
 class SaveJson(object):
 
  def save_file(self, path, item):
 
-        # 先将字典对象转化为可写入文本的字符串
+    
         item = json.dumps(item)
 
         try:
@@ -127,10 +125,10 @@ def main():
        soc.settimeout(30) #15
 
        while True:#right one
-            # count = ser.inWaiting()  # 获取串口缓冲区数据
+            # count = ser.inWaiting()  
             # if count != 0:
             #     #print(count)
-            #     recv = ser.read(size=32).decode("ASCII")  # 读出串口数据，数据采用ASCII编码
+            #     recv = ser.read(size=32).decode("ASCII") 
             #     #print('recv'+recv)
             #
             #     if recv.find('?')!=-1:
