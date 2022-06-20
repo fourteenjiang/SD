@@ -13,8 +13,8 @@ import serial
 
 
 ser = serial.Serial(port="COM3", baudrate=9600, bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE,
-                    stopbits=serial.STOPBITS_ONE, timeout=5)  # 开启com3口，波特率9600，超时5
-ser.flushInput()  # 清空缓冲区
+                    stopbits=serial.STOPBITS_ONE, timeout=5)  #
+ser.flushInput()  
 HOST = '192.168.125.1'
 PORT = 1023
 from fuzzylogic.classes import Domain, Set, Rule
